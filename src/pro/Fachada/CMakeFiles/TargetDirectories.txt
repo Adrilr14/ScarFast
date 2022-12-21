@@ -1,0 +1,12 @@
+/home/alex/Escritorio/FV/Proyecto FV/proyectoabp-grupo-d05/src/pro/ScarFast/CMakeFiles/rebuild_cache.dir
+/home/alex/Escritorio/FV/Proyecto FV/proyectoabp-grupo-d05/src/pro/ScarFast/CMakeFiles/edit_cache.dir
+/home/alex/Escritorio/FV/Proyecto FV/proyectoabp-grupo-d05/src/pro/ScarFast/CMakeFiles/ScarFast.dir
+/home/alex/Escritorio/FV/Proyecto FV/proyectoabp-grupo-d05/src/pro/ScarFast/CMakeFiles/libModulos.dir
+/home/alex/Escritorio/FV/Proyecto FV/proyectoabp-grupo-d05/src/pro/ScarFast/ej_modulos/CMakeFiles/rebuild_cache.dir
+/home/alex/Escritorio/FV/Proyecto FV/proyectoabp-grupo-d05/src/pro/ScarFast/ej_modulos/CMakeFiles/edit_cache.dir
+/home/alex/Escritorio/FV/Proyecto FV/proyectoabp-grupo-d05/src/pro/ScarFast/facade/CMakeFiles/rebuild_cache.dir
+/home/alex/Escritorio/FV/Proyecto FV/proyectoabp-grupo-d05/src/pro/ScarFast/facade/CMakeFiles/edit_cache.dir
+/home/alex/Escritorio/FV/Proyecto FV/proyectoabp-grupo-d05/src/pro/ScarFast/game/sys/CMakeFiles/rebuild_cache.dir
+/home/alex/Escritorio/FV/Proyecto FV/proyectoabp-grupo-d05/src/pro/ScarFast/game/sys/CMakeFiles/edit_cache.dir
+/home/alex/Escritorio/FV/Proyecto FV/proyectoabp-grupo-d05/src/pro/ScarFast/game/factory/CMakeFiles/rebuild_cache.dir
+/home/alex/Escritorio/FV/Proyecto FV/proyectoabp-grupo-d05/src/pro/ScarFast/game/factory/CMakeFiles/edit_cache.dir

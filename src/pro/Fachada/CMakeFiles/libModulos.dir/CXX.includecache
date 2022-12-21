@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/alex/Escritorio/FV/Proyecto FV/proyectoabp-grupo-d05/src/pro/ScarFast/game/factory/player.cpp
+
+/home/alex/Escritorio/FV/Proyecto FV/proyectoabp-grupo-d05/src/pro/ScarFast/game/factory/sprite.cpp
+
+/home/alex/Escritorio/FV/Proyecto FV/proyectoabp-grupo-d05/src/pro/ScarFast/game/sys/collision.cpp
+
+/home/alex/Escritorio/FV/Proyecto FV/proyectoabp-grupo-d05/src/pro/ScarFast/game/sys/input.cpp
+
+/home/alex/Escritorio/FV/Proyecto FV/proyectoabp-grupo-d05/src/pro/ScarFast/game/sys/physics.cpp
+physics.hpp
+/home/alex/Escritorio/FV/Proyecto FV/proyectoabp-grupo-d05/src/pro/ScarFast/game/sys/physics.hpp
+
+/home/alex/Escritorio/FV/Proyecto FV/proyectoabp-grupo-d05/src/pro/ScarFast/game/sys/physics.hpp
+

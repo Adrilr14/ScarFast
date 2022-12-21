@@ -9,14 +9,57 @@
 			"name": "PROT: plantilla_fv",
 			"path": "src/pro/plantilla_fv"
 		},{
-			"name": "ScarFast",
-			"path": "src/pro/ScarFast"
+			"name": "PROT: fachada",
+			"path": "src/pro/Fachada"
+		},{
+			"name": "PROT: mapa",
+			"path": "src/pro/Mapa"
+		},{
+			"name": "PROT: usar_arma",
+			"path": "src/pro/usar_arma",
+		},{
+			"name": "PROT: colisiones",
+			"path": "src/pro/colisiones",
+		},{
+			"name": "PROT: Movimiento",
+			"path": "src/pro/movimiento"
+		},{
+			"name": "PROT: Menu",
+			"path": "src/pro/menu"
+		},{
+			"name": "PROT: enemigos",
+			"path": "src/pro/enemigos"
+		},{
+			"name": "PROT: coger_objeto",
+			"path": "src/pro/coger_objeto"
+		},{
+			"name": "PROT: ganar_partida",
+			"path": "src/pro/ganar_partida"
+		},{
+			"name": "PROT: movimiento",
+			"path": "src/pro/movimiento"
+		},{
+			"name": "PROT: eliminar_jugador",
+			"path": "src/pro/eliminar_jugador"
+		},{
+			"name": "PROT: ia_enemigo_pursuit",
+			"path": "src/pro/ia_enemigo_pursuit"
+		},{
+			"name": "PROT: ia_enemigo_patrol",
+			"path": "src/pro/ia_enemigo_patrol"
+		},{
+			"name": "PROT: hud",
+			"path": "src/pro/hud"
+		},{
+			"name": "PROT: ia_enemigo_shooter",
+			"path": "src/pro/ia_enemigo_shooter"
 		}
-
 	],
 	"settings": {
 		"editor.wordWrap": "on",
 		"files.associations": {
+			"iosfwd": "cpp",
+			"sstream": "cpp",
 			"array": "cpp",
 			"atomic": "cpp",
 			"bit": "cpp",
@@ -29,12 +72,10 @@
 			"cstdint": "cpp",
 			"cstdio": "cpp",
 			"cstdlib": "cpp",
-			"cstring": "cpp",
 			"ctime": "cpp",
 			"cwchar": "cpp",
 			"cwctype": "cpp",
 			"deque": "cpp",
-			"forward_list": "cpp",
 			"map": "cpp",
 			"unordered_map": "cpp",
 			"vector": "cpp",
@@ -55,19 +96,18 @@
 			"utility": "cpp",
 			"fstream": "cpp",
 			"initializer_list": "cpp",
-			"iosfwd": "cpp",
 			"iostream": "cpp",
 			"istream": "cpp",
 			"limits": "cpp",
 			"new": "cpp",
 			"ostream": "cpp",
-			"sstream": "cpp",
+			"forward_list": "cpp",
+			"valarray": "cpp",
+			"cstring": "cpp",
+			"set": "cpp",
 			"stdexcept": "cpp",
 			"streambuf": "cpp",
-			"typeinfo": "cpp",
-			"valarray": "cpp",
-			"complex": "cpp",
-			"set": "cpp"
+			"typeinfo": "cpp"
 		}
 	}
 }
