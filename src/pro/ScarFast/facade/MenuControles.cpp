@@ -16,7 +16,7 @@ MenuControles::MenuControles(int width, int height){
     texto[0].setString("Atras");
     texto[0].setCharacterSize(50);
     texto[0].setColor(sf::Color::Yellow);
-    texto[0].setPosition(sf::Vector2f(width / 2 - (50*5)/2, height / (5 + 1)* 4)); 
+    texto[0].setPosition(sf::Vector2f(width / 2 - (50*30)/2, height / (5 + 1)* 4)); 
 }
 
 void MenuControles::draw(sf::RenderWindow &window){

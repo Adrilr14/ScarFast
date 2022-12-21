@@ -162,7 +162,6 @@ void Game_t::InitGame() {
     keyboard = new Keyboard_t();
     std::srand(std::time(nullptr));
     map->loadMap(3+rand()%4);
-    //map->loadMap(3);
     animations->load_animations("resources/Animations/minotauro.json");
     animations->load_animations("resources/Animations/golem.json");
     crearEnemigos(); // Creamos los enemigos
