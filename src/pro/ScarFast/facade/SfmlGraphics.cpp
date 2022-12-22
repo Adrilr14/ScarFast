@@ -11,7 +11,7 @@
 
 void SfmlGraphics::createWindow() {
     //sf::Style::Fullscreen
-    window = new sf::RenderWindow(sf::VideoMode(widthScreen,heightScreen),"Test");
+    window = new sf::RenderWindow(sf::VideoMode(widthScreen,heightScreen),"ScarFast",sf::Style::Fullscreen);
     time = new sf::Clock();
     //renderHUD.create(widthScreen+30,80);
     vista = window->getView();
