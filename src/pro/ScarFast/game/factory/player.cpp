@@ -66,11 +66,11 @@ void Player_t::powerUpUsed() {
         if(tiempo_transcurrido == 0.0) {
             tiempo_transcurrido = ControllerMan::instancia().controller().getTimeElapsed() + 5.f;
         }
-    if(tiempo_transcurrido <= ControllerMan::instancia().controller().getTimeElapsed()) {
-        powerUp->disabled_PowerUp(this);
-        //delete powerUp;
-        powerUp = nullptr;
-        tiempo_transcurrido = 0.0;
+        if(tiempo_transcurrido <= ControllerMan::instancia().controller().getTimeElapsed()) {
+            powerUp->disabled_PowerUp(this);
+            //delete powerUp;
+            powerUp = nullptr;
+            tiempo_transcurrido = 0.0;
         }
     }   
 }
@@ -146,11 +146,6 @@ void Player_t::setKit(Sprite_t* k) {
 }
 
 void Player_t::setPowerUp(Power_Up* pw) {
-    powerUp = new Power_Up(pw);
-}
-
-
-void Player_t::disabledpwup(Power_Up* pw) {
     powerUp = pw;
 }
 

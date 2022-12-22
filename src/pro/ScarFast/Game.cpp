@@ -162,7 +162,6 @@ void Game_t::InitGame() {
     keyboard = new Keyboard_t();
     std::srand(std::time(nullptr));
     map->loadMap(3+rand()%4);
-    //map->loadMap(3);
     animations->load_animations("resources/Animations/minotauro.json");
     animations->load_animations("resources/Animations/golem.json");
     crearEnemigos(); // Creamos los enemigos
@@ -177,7 +176,7 @@ void Game_t::InitGame() {
     two->getSprite()->getPhysics()->x = map->getRespawn_two()->getPhysics()->x;
     two->getSprite()->getPhysics()->y = map->getRespawn_two()->getPhysics()->y;
 
-    ronda = new Ronda_t(Max_rondas::ronda_inter);
+    ronda = new Ronda_t(Max_rondas::ronda_min);
 
     hud = new Hud("resources/HUD.png",map->getHud());
     hud->display_hud();

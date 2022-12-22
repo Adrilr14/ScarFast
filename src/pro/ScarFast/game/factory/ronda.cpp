@@ -38,7 +38,3 @@ void Ronda_t::resetPuntuaje() {
 int Ronda_t::getPunuaje(int pos) {
     return puntuaje[pos];
 }
-
-void Ronda_t::setRonda(Max_rondas s) {
-    maxr = s;
-}

@@ -64,7 +64,6 @@ public:
     void setDisparo(Disparo* d);
     void setKit(Sprite_t* k);
     void setPowerUp(Power_Up* pw);
-    void disabledpwup(Power_Up* pw);
     void setEstado(Estado_Personaje s);
     void setInvulnerable(bool v);
     void setReceive_damage(bool receive_damage);

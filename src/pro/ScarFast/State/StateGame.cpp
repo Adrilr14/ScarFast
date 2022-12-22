@@ -68,7 +68,7 @@ void StateGame_t::update() {
 
     if(Game_t::getInstance()->getRonda()->tryGanarPartida() == 0 ||
         Game_t::getInstance()->getRonda()->tryGanarPartida() == 1) {
-            Game_t::getInstance()->setState(State_t::MPLAY);
+            //std::cout << "Ha ganado un jugador " << std::endl;       
     }
 
     Game_t::getInstance()->getHud()->update();

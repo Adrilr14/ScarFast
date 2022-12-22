@@ -114,8 +114,8 @@ void Physics_t::checkCollisionRespawn(Player_t* p) {
         p->getSonido()->play("ganarRonda");
         auto* mapa = Game_t::getInstance()->getMap();
         p->setKit(nullptr);
-        p_two->disabledpwup(nullptr);
-        p_one->disabledpwup(nullptr);
+        p_two->setPowerUp(nullptr);
+        p_one->setPowerUp(nullptr);
         //Le sumamos la ronda
         Game_t::getInstance()->getRonda()->sumarRonda(p->getID()-1);
         //Posicionar a los personajes en su respectivo respawn
@@ -160,6 +160,7 @@ void Physics_t::checkCollisionSpikes(Player_t* p) {
                 //Comprobamos la colision
                 bool c = ControllerMan::instancia().controller().checkCollisionSpikes(p->getID());
                 if(c && !p->getReceive_damage() && p->getEstado() != Estado_Personaje::morir){
+                    //std::cout << "Me hago daño\n";
                     p->getHp()->reduceHp(20);
                     if (p->getHp()->getHp() > 0)
                     {
@@ -173,7 +174,7 @@ void Physics_t::checkCollisionSpikes(Player_t* p) {
             if( Game_t::getInstance()->getPlayerOne()->getPowerUp()->getCategory() == Category_t::spikes && 
                 Game_t::getInstance()->getPlayerOne()->getPowerUp()->getUsed() == true){
                 //Comprobamos la colision
-                bool c = ControllerMan::instancia().controller().checkCollisionSpikes(p->getID());
+                bool c = ControllerMan::instancia().controller().checkCollisionSpikes(p->getID() && p->getEstado() != Estado_Personaje::morir);
                 if(c && !p->getReceive_damage() && p->getEstado() != Estado_Personaje::morir){
                     //std::cout << "Me hago daño\n";
                     p->getHp()->reduceHp(20);

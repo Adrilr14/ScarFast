@@ -50,6 +50,9 @@ En el hito final he realizado las funcionalidades de los power-up, he completado
 ## Elena Alcaraz Sánchez
 En el hito final he editado y hecho los sprites de cada jugador y enemigo, he realizado las animaciones de todos los personajes y enemigos con sus cuatro estados. También de los enemigos, el respawn, que los enemigos ataquen, que quiten vida o no según su estado. Y por último, la selección de personajes del menú.
 
+## Adrián Larrosa Romero
+En este último hito he realizado el tipo de IA que faltaba y he añadido los distintos tipos de enemigos en el juego completo. También he añadidio tiempos de respawn para los enemigos cuando mueren y cuando se finaliza una ronda, countdowns para los disparos, cadencias y daños para las armas y los enemigos y la posibilidad de soltar el kit para no poder atacar con él. Además, he resuelto varios bugs que había durante la partida.
+
 # Autoevaluación general Hito 3
 Nota: 7
 

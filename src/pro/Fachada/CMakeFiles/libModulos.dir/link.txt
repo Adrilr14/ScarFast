@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblibModulos.a  CMakeFiles/libModulos.dir/ej_modulos/mimodulo.cpp.o CMakeFiles/libModulos.dir/ej_modulos/mimodulo2.cpp.o CMakeFiles/libModulos.dir/facade/ControllerMan.cpp.o CMakeFiles/libModulos.dir/facade/SfmlGraphics.cpp.o CMakeFiles/libModulos.dir/game/sys/collision.cpp.o CMakeFiles/libModulos.dir/game/sys/input.cpp.o CMakeFiles/libModulos.dir/game/sys/physics.cpp.o CMakeFiles/libModulos.dir/game/factory/player.cpp.o CMakeFiles/libModulos.dir/game/factory/sprite.cpp.o
+/usr/bin/ranlib liblibModulos.a

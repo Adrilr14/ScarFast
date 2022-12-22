@@ -13,7 +13,6 @@ class Ronda_t {
         int tryGanarPartida();
         void resetPuntuaje();
         int getPunuaje(int pos);
-        void setRonda(Max_rondas s);
 
     private:
         Max_rondas maxr;

@@ -126,7 +126,7 @@ void Map_t::loadMap(int ruta) {
         phy_kit
     );
      
-    auto spikes_json = js["layers"][7]["objects"];
+    auto spikes_json = js["layers"][6]["objects"];
     for(unsigned int i = 0; i < spikes_json.size(); i++){
         Physics_t* p = new Physics_t(
             spikes_json[i]["x"],
@@ -137,7 +137,7 @@ void Map_t::loadMap(int ruta) {
         spikes_1.push_back(new Sprite_t(route+"spikes.png",20,25,p));
     }
 
-    spikes_json = js["layers"][6]["objects"];
+    spikes_json = js["layers"][7]["objects"];
     for(unsigned int i = 0; i < spikes_json.size(); i++){
         Physics_t* p = new Physics_t(
             spikes_json[i]["x"],

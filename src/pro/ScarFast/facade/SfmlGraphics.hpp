@@ -64,8 +64,8 @@ private:
     bool comprobacion = true;
 
     sf::View vista;
-    sf::View vistaHUD;
-    sf::RenderTexture renderHUD;
+    //sf::View vistaHUD;
+    //sf::RenderTexture renderHUD;
     sf::Sprite header;
 
     float temporizador;

@@ -29,17 +29,9 @@ private:
     Temporizador_t* temporizador {nullptr};
     inline static int examinar = 0;
 public:
+
     Power_Up(Sprite_t* s, int t_b = 10 , int t_i = 5) : 
     spr(s), tiempo_box(t_b), tiempo_item(t_i){};
-    Power_Up(const Power_Up* copia) {
-        entityID = copia->entityID;
-        spr = copia->spr;
-        tiempo_box = copia->tiempo_box;
-        tiempo_item = copia->tiempo_item;
-        type = copia->type;
-        activate = copia->activate;
-        used = copia->used;
-    }
 
     static void create_powerUp_for_the_map();
     static void reset_activate_values();

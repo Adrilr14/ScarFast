@@ -11,9 +11,9 @@
 
 void SfmlGraphics::createWindow() {
     //sf::Style::Fullscreen
-    window = new sf::RenderWindow(sf::VideoMode(widthScreen,heightScreen),"ScarFast");
+    window = new sf::RenderWindow(sf::VideoMode(widthScreen,heightScreen),"Test");
     time = new sf::Clock();
-    renderHUD.create(widthScreen+30,80);
+    //renderHUD.create(widthScreen+30,80);
     vista = window->getView();
 
 
@@ -21,8 +21,8 @@ void SfmlGraphics::createWindow() {
     vista.setCenter((widthScreen)/2,heightScreen/2);
     vista.setSize(widthScreen,heightScreen);
 
-    vistaHUD.setCenter(80/2, heightScreen/2);
-    vistaHUD.setSize(80, heightScreen);
+    //vistaHUD.setCenter(80/2, heightScreen/2);
+    //vistaHUD.setSize(80, heightScreen);
 
 
     window->setFramerateLimit(fps);
@@ -1246,15 +1246,15 @@ void SfmlGraphics::createHUD() {
     if(hud->loadFromFile(get_hud->getRoute())){
         //Corazones
         brawl.loadFromFile("resources/fonts/Brawl/brawl.ttf");
-        //j1.setFont(brawl);
-        //j1.setString("J1");
-        //j1.setColor(sf::Color(0,0,0));
-        //j1.setPosition(get_hud->getHud_items()["J1"].first,get_hud->getHud_items()["J1"].second-20);
-//
-        //j2.setFont(brawl);
-        //j2.setString("J2");
-        //j2.setColor(sf::Color(0,0,0));
-        //j2.setPosition(get_hud->getHud_items()["J2"].first,get_hud->getHud_items()["J2"].second-20);
+        j1.setFont(brawl);
+        j1.setString("J1");
+        j1.setColor(sf::Color(0,0,0));
+        j1.setPosition(get_hud->getHud_items()["J1"].first,get_hud->getHud_items()["J1"].second-20);
+
+        j2.setFont(brawl);
+        j2.setString("J2");
+        j2.setColor(sf::Color(0,0,0));
+        j2.setPosition(get_hud->getHud_items()["J2"].first,get_hud->getHud_items()["J2"].second-20);
 
         int pos = 0;
         for(auto& hearts_one : get_hud->life_pl_one){
@@ -1371,6 +1371,7 @@ void SfmlGraphics::updateHUD() {
                 mapa->getKit()->getHeight())
         );
     }
+    mini_kit->setPosition(5000,5000);
     mini_kit->setScale(1.6f,1.6f);
     if(Game_t::getInstance()->getPlayerOne()->getKit() != nullptr) {
         mini_kit->setPosition(hud_->getHud_items()["life_1"].first + 170, hud_->getHud_items()["life_1"].second-15);
@@ -1381,7 +1382,6 @@ void SfmlGraphics::updateHUD() {
     }
 
     if(Game_t::getInstance()->getPlayerOne()->getPowerUp() != nullptr) {
-        //std::cout << "Categoria: " <<  Game_t::getInstance()->getPlayerOne()->getPowerUp() << " " << " usado: " << Game_t::getInstance()->getPlayerOne()->getPowerUp()->getUsed() << std::endl;
         if(pw1 == nullptr){
             pw1 = new sf::Sprite(*hud);
         }
@@ -1684,11 +1684,11 @@ void SfmlGraphics::updateGame(){
         }
     }*/
 
-    //for(unsigned int i = 0; i < hud_items.size(); i++) {
-    //    if(hud_items[i] != nullptr) {
-    //        window->draw(*hud_items[i]);
-    //    }
-    //}
+    for(unsigned int i = 0; i < hud_items.size(); i++) {
+        if(hud_items[i] != nullptr) {
+            window->draw(*hud_items[i]);
+        }
+    }
 
     for(unsigned int i = 0; i < powerUps.size(); i++) {
         if(powerUps[i] != nullptr) {
@@ -1759,119 +1759,106 @@ void SfmlGraphics::updateGame(){
         window->draw(textoTempo);
     }
     
-    camara();
+    //camara();
 
-    //window->draw(j1);
-    //window->draw(j2);
-    //if(pw1 != nullptr) {
-    //    window->draw(*pw1);
-    //}
-    //if(pw2 != nullptr) {
-    //    window->draw(*pw2);
-    //}
-    //if(mini_kit != nullptr) {
-    //    window->draw(*mini_kit);
-    //}
-    //window->draw(ronda);
-//
-    //for(auto& ho : hud_one) {
-    //    if(ho.second != nullptr) {
-    //        window->draw(*ho.second);
-    //    }
-    //}
-//
-    //for(auto& ht : hud_two) {
-    //    if(ht.second != nullptr) {
-    //        window->draw(*ht.second);
-    //    }
-    //}
+    window->draw(j1);
+    window->draw(j2);
+    if(pw1 != nullptr) {
+        window->draw(*pw1);
+    }
+    if(pw2 != nullptr) {
+        window->draw(*pw2);
+    }
+    if(mini_kit != nullptr) {
+        window->draw(*mini_kit);
+    }
+    window->draw(ronda);
 
-    renderHUD.clear();
-    renderHUD.setView(vistaHUD);
+    for(auto& ho : hud_one) {
+        if(ho.second != nullptr) {
+            window->draw(*ho.second);
+        }
+    }
+
+    for(auto& ht : hud_two) {
+        if(ht.second != nullptr) {
+            window->draw(*ht.second);
+        }
+    }
+
+    //renderHUD.clear();
+    //renderHUD.setView(vistaHUD);
     sf::RectangleShape rectangulo;
 
     rectangulo.setSize({1500, 1000});
     rectangulo.setFillColor(sf::Color(255,204,153));
-    renderHUD.draw(rectangulo);
+    //renderHUD.draw(rectangulo);
 
 
     //HUD
-    j1.setScale(0.07, 20);
-    j1.setPosition(1, 200);
-    j2.setScale(0.07, 20);
-    j2.setPosition(75, 200);
+    //j1.setScale(0.07, 20);
+    //j1.setPosition(1, 200);
+    //j2.setScale(0.07, 20);
+    //j2.setPosition(75, 200);
+    //renderHUD.draw(j1);
+    //renderHUD.draw(j2);
+
+    //for(unsigned int i = 0; i < hud_items.size(); i++) {
+    //    if(hud_items[i] != nullptr) {
+    //        hud_items[i]->setScale(0.08, 20);
+    //        hud_items[i]->setPosition(28, 550);
+    //        renderHUD.draw(*hud_items[i]);
+//
+    //        hud_items[i]->setPosition(49, 550);
+    //        renderHUD.draw(*hud_items[i]);
+//
+    //    }
+    //}
 
 
-    mini_kit->setPosition(5000, 5000);  
-    if(Game_t::getInstance()->getPlayerOne()->getKit() != nullptr) {
-        mini_kit->setPosition(1, 300);
-    }
+    //if(pw1 != nullptr) {
+    //    pw1->setScale(0.097, 20);
+    //    pw1->setPosition(28, 550);
+    //    renderHUD.draw(*pw1);
+    //}
 
-     if(Game_t::getInstance()->getPlayerTwo()->getKit() != nullptr) {
-        //mini_kit->setPosition(50, 300);
-    }
-    mini_kit->setScale(0.1, 30);
-    renderHUD.draw(*mini_kit);
+    //if(pw2 != nullptr) {
+    //    pw2->setScale(0.097, 20);
+    //    pw2->setPosition(49, 550);
+    //    renderHUD.draw(*pw2);
+    //}
 
-
-    renderHUD.draw(j1);
-    renderHUD.draw(j2);
-
-    for(unsigned int i = 0; i < hud_items.size(); i++) {
-        if(hud_items[i] != nullptr) {
-            hud_items[i]->setScale(0.08, 20);
-            hud_items[i]->setPosition(28, 550);
-            renderHUD.draw(*hud_items[i]);
-
-            hud_items[i]->setPosition(49, 550);
-            renderHUD.draw(*hud_items[i]);
-
-        }
-    }
+    //ronda.setColor(sf::Color(0,0,0));
+    //ronda.setScale(0.12, 20);
+    //ronda.setPosition(34, 200);
+    //renderHUD.draw(ronda);
 
 
-    if(pw1 != nullptr) {
-        pw1->setScale(0.097, 20);
-        pw1->setPosition(28, 550);
-        renderHUD.draw(*pw1);
-    }
-
-    if(pw2 != nullptr) {
-        pw2->setScale(0.097, 20);
-        pw2->setPosition(49, 550);
-        renderHUD.draw(*pw2);
-    }
-
-    ronda.setColor(sf::Color(0,0,0));
-    ronda.setScale(0.12, 20);
-    ronda.setPosition(34, 200);
-    renderHUD.draw(ronda);
-
-
-    int cont=1;
-    for(auto& ho : hud_one) {
-        if(ho.second != nullptr) {
-            ho.second->setPosition(3+4*cont,600);
-            ho.second ->setScale(0.097, 20);
-            renderHUD.draw(*ho.second);
-            cont++;
-        }
-    }
-
-    int cont2=1;
-    for(auto& ht : hud_two) {
-        if(ht.second != nullptr) {
-            ht.second->setScale(0.097,20);
-            ht.second->setPosition(50+4*cont2,600);
-            renderHUD.draw(*ht.second);
-            cont2++;
-        }
-    }
+    //int cont=1;
+    //for(auto& ho : hud_one) {
+    //    if(ho.second != nullptr) {
+    //        ho.second->setPosition(3+4*cont,600);
+    //        ho.second ->setScale(0.097, 20);
+    //        renderHUD.draw(*ho.second);
+    //        cont++;
+    //    }
+    //}
+//
+    //int cont2=1;
+    //for(auto& ht : hud_two) {
+    //    if(ht.second != nullptr) {
+    //        ht.second->setScale(0.097,20);
+    //        ht.second->setPosition(50+4*cont2,600);
+    //        renderHUD.draw(*ht.second);
+    //        cont2++;
+    //    }
+    //}
 
    
-    renderHUD.display();
-    header.setTexture(renderHUD.getTexture());
-    header.setScale(0.5, 0.5);
+    //renderHUD.display();
+    //header.setTexture(renderHUD.getTexture());
+    
+    //header.setScale(0.5, 0.5);
     window->draw(header);
     window->setView(vista);
     window->display();
