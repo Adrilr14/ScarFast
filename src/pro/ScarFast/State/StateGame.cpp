@@ -11,6 +11,7 @@ void StateGame_t::init(){
 
 void StateGame_t::getInput() {
     if(Game_t::getInstance()->getGameStart()){
+        renderEngine->getInputGame();
         Physics_t::movePlayer();
     }
 }

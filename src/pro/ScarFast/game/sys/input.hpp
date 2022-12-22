@@ -19,6 +19,8 @@ public:
     bool key_shift_right {false};
     bool key_shift_left  {false};
 
+    bool key_Esc    {false};
+
     Keyboard_t() = default;
     ~Keyboard_t();
 

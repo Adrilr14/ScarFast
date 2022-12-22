@@ -571,6 +571,9 @@ void SfmlGraphics::check_Keyboard(Keyboard_t* key) {
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::RShift)){
         key->key_shift_right = true;
     }
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){
+        key->key_Esc = true;
+    }
 }
 
 void SfmlGraphics::createShoot(EntityID_t id, Sprite_t* spr){
@@ -1652,7 +1655,23 @@ void SfmlGraphics::initGame(){
 
 }
 void SfmlGraphics::getInputGame() {
+    sf::Event event;
+    while(window->pollEvent(event)){
+        switch(event.type){
+        case sf::Event::KeyReleased:
+            switch (event.key.code)
+            {
+            case sf::Keyboard::Escape:
+                window->close();
+                break;
+            }
+            break;
 
+        case sf::Event::Closed:
+            window->close();
+            break;
+        }
+    }
 }
 void SfmlGraphics::updateGame(){
 
